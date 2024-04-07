@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Navbar using HTML and CSS | Codehal</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header class="header">
+      <a href="#" class="logo">Logo</a>
+
+      <label for="" class="icons">
+        <!-- Voy minuto4 video:How to Create Responsive Navbar using HTML & CSS || canal:Codehal
+ -->
+        <!-- <i class='bx bx-menu'></i> -->
+      </label>
+
+      <nav class="navbar">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Galelery</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+        <span></span>
+      </nav>
+    </header>
+  </body>
+</html>
+
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url("../../public/background.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.3rem 10%;
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(50px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+  }
+
+  .logo {
+    font-size: 2rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+  }
+
+  nav {
+    position: relative;
+    width: 524px;
+    height: 50px;
+    background: #222;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  nav a {
+    position: relative;
+    display: inline-block;
+    font-size: 1em;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+    padding: 0 23px;
+    z-index: 1;
+  }
+
+  nav span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 95px;
+    height: 100%;
+    background: linear-gradient(45deg, #4f1919, #ff3333);
+    border-radius: 8px;
+    transition: 0.5s;
+  }
+
+  nav a:nth-child(1):hover ~ span {
+    left: 0;
+  }
+  nav a:nth-child(2):hover ~ span {
+    left: 95px;
+  }
+  nav a:nth-child(3):hover ~ span {
+    left: 189px;
+    width: 110px;
+  }
+  nav a:nth-child(4):hover ~ span {
+    left: 289px;
+    width: 115px;
+  }
+  nav a:nth-child(5):hover ~ span {
+    left: 413px;
+    width: 110px;
+  }
+
+  /* BREAKPOINTS */
+  @media (max-width: 992px) {
+    .header {
+      padding: 1.3rem 5%;
+    }
+  }
+  @media (max-width: 768px) {
+    .icosns {
+      display: inline-flex;
+    }
+
+    .navbar {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 17.7;
+      background: rgb(0, 234, 255);
+    }
+  }
+</style>
